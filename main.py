@@ -12,7 +12,7 @@ db = SQLALchemy(app)#db
 
 class test(db.Model):
   col =db.Column(db.String(255), primary_key=True)
-  col2 = db.Column(db.String(255), unique=True, nellable=False)
+  col2 = db.Column(db.String(255), unique=True, nullable=False)
 
     def __repr__(self):
       return '%r' % self.col
@@ -22,7 +22,7 @@ def root():
   return render_template('index.html')
 #  return render_template('atminasspele.html')
 
-@app.route('postgresSQL')
+@app.route('/postgresSQL')
 def postgresSQL();
   result=test.query.all()
   return '%r' % result
@@ -46,6 +46,10 @@ def veidotaji():
 def results():
   return render_template('rezultati.html')
 
+@app.route('/postgresSQL')
+def postgresSQL();
+  result=test.query.all()
+  return '%r' % result
 
 #app.run(host='0.0.0.0', port=8020)
 if __name__ == '__main__':
