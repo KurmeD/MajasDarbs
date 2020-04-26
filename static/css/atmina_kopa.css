@@ -1,16 +1,15 @@
-.leftside{
+.leftside, .rightside {
     height:50vh;
     width: 100%;
 }
-.rightside{
-    height:50vh;
-    width: 100%;
-    background:blue;
-}
+
 
 @media screen and (min-width:768px)
 { 
     .leftside, .rightside{
         height:100vh;
-    }}
-    
+    }
+}
+.rightside{
+    background:blue;
+}
