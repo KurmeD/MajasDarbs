@@ -13,32 +13,33 @@ db = SQLAlchemy(app)#db
 class test(db.Model):
   col =db.Column(db.String(255), primary_key=True)
   col2 = db.Column(db.String(255), unique=True, nullable=False) 
-    def _repr_ (self):
+    def __repr__ (self):
       return '%r' % self.col
 
 @app.route('/')
 def root():
-  return render_template('index.html')
+  return ("sveika pasule")
+#  return render_template('index.html')
 #  return render_template('atminasspele.html')
 
-@app.route('/atminasspele')
-def spele():
-  return render_template('atminasspele.html')
+#@app.route('/atminasspele')
+#def spele():
+ # return render_template('atminasspele.html')
 
-@app.route('/kalkulators')
-def kalkulators():
-  return render_template('kalkulators.html')
+#@app.route('/kalkulators')
+#def kalkulators():
+#  return render_template('kalkulators.html')
   
-@app.route('/saites')
-def saites():
-  return render_template('saites.html')
-@app.route('/veidotaji')
-def veidotaji():
-  return render_template('veidotaji.html')
+#@app.route('/saites')
+#def saites():
+#  return render_template('saites.html')
+#@app.route('/veidotaji')
+#def veidotaji():
+#  return render_template('veidotaji.html')
 
-@app.route('/rezultati')
-def results():
-  return render_template('rezultati.html')
+#@app.route('/rezultati')
+#def results():
+#  return render_template('rezultati.html')
 
 @app.route('/postgreSQL')
 def postgreSQL():
