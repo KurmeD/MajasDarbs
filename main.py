@@ -9,12 +9,12 @@ app = Flask('app')
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db = SQLAlchemy(app)
 
-class test(db.Model):
-  col =db.Column(db.String(255), primary_key=True)
-  col2 = db.Column(db.String(255), unique=True, nullable=False) 
+#class test(db.Model):
+#  col =db.Column(db.String(255), primary_key=True)
+# col2 = db.Column(db.String(255), unique=True, nullable=False) 
     
-    def __repr__ (self):
-      return '%r' % self.col
+ #   def __repr__ (self):
+ #     return '%r' % self.col
 
 @app.route('/')
 def root():
@@ -40,10 +40,10 @@ def veidotaji():
 def results():
   return render_template('rezultati.html')
 
-@app.route('/postgreSQL')
-def postgreSQL():
-  result=test.query.all()
-  return '%r' % result
+#@app.route('/postgreSQL')
+#def postgreSQL():
+ # result=test.query.all()
+ # return '%r' % result
 
 #app.run(host='0.0.0.0', port=8020)
 if __name__ == '__main__':

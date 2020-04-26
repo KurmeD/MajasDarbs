@@ -9,6 +9,7 @@
     <title>
       Atmiņas Spēle
     </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/atmina_kopa.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/atminasspele.css') }}">
     <script src="{{ url_for('static', filename='js/atminasspele.js') }}"></script>
     <script type="text/javascript" charset="UTF-8">
@@ -18,10 +19,21 @@
     </script>
   </head>
   <body>
+    <div class="row no gutters">
+      <div class="col-md-6 no-gutters">
+        <div class="leftside d-flex justify-content-center align-item-center>
     <h1>Atmiņas spēle</h1>
         <!-- spēles vieta -->
     <div id="konteiners"></div>
-
+    </div>
+      </div>
+      <div class="col-md-6 no-gutters">
+        <div class="rightside d-flex justify-content-center align-item-center">
+         laba
+        </div>
+      </div>
+    </div>
+    
   </body>
 </html>
 {% endblock %}
