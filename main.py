@@ -2,7 +2,7 @@ import os #db
 #from flask import Flask, render_template
 
 #app = Flask(__name__)
-from flask import Flask, render_template
+from flask import Flask#, render_template
 from flask_sqlalchemy import SQLALchemy #db
 
 
@@ -13,7 +13,6 @@ db = SQLALchemy(app)#db
 class test(db.Model):
   col =db.Column(db.String(255), primary_key=True)
   col2 = db.Column(db.String(255), unique=True, nullable=False) 
-
     def __repr__(self):
       return '%r' % self.col
 
