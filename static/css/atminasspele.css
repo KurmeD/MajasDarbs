@@ -1,5 +1,19 @@
-.laukums {
-  max-width: 70%;
+.leftside, .rightside {
+  height:50vh;
+  width: 100%;
+}
+
+@media screen and (min-width:768px)
+{ 
+  .leftside, .rightside{
+      height:100vh;
+  }
+}
+.rightside{
+  background:blue;
+
+}.laukums {
+  max-width: 50%;
   display: grid;
   margin-right: 5px;
   grid-template-columns: auto auto auto auto;
