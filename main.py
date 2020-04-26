@@ -40,10 +40,10 @@ def veidotaji():
 def results():
   return render_template('rezultati.html')
 
-@app.route('/postgresSQL')
-def postgresSQL();
-  result=test.query.all()
-  return '%r' % result
+#@app.route('/postgreSQL')
+#def postgresSQL();
+  #result=test.query.all()
+  #return '%r' % result
 
 #app.run(host='0.0.0.0', port=8020)
 if __name__ == '__main__':
