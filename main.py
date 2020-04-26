@@ -1,17 +1,13 @@
-import os 
-#db
 #from flask import Flask, render_template
 
 #app = Flask(__name__)
+import os
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLALchemy
- #db
-
 
 app = Flask('app')
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']#db
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db = SQLAlchemy(app)
-#db
 
 class test(db.Model):
   col =db.Column(db.String(255), primary_key=True)
