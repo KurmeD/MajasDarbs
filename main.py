@@ -6,12 +6,13 @@ from flask import Flask, render_template
 from flask_sqlalchemy import SQLALchemy
 
 app = Flask('app')
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get('DATABASE_URL')
 db = SQLAlchemy(app)
 
 class test(db.Model):
   col =db.Column(db.String(255), primary_key=True)
-  col2 = db.Column(db.String(255), unique=True, nullable=False) 
+  col2 = c) 
     
     def __repr__ (self):
       return '%r' % self.col
