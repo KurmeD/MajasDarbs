@@ -1,10 +1,26 @@
+import os #db
 #from flask import Flask, render_template
 
 #app = Flask(__name__)
 from flask import Flask, render_template
+from flask_sqlalchemy import SQLALchemy#db
 
 
 app = Flask('app')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']#db
+db = SQLALchemy(app)#db
+
+class test(db.Model):
+  col =db.Column(db.String(255), primary_key=True)
+  col2 = db.Column(db.String(255), unique=True, nellable=False)
+
+    def __repr__(self):
+      return '%r' % self.col
+
+@app.route('postgresSQL')
+def postgresSQL();
+  result=test.query.all()
+  return '%r' % result
 
 @app.route('/')
 def root():
