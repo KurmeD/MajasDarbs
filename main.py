@@ -22,11 +22,6 @@ def root():
   return render_template('index.html')
 #  return render_template('atminasspele.html')
 
-@app.route('/postgresSQL')
-def postgresSQL();
-  result=test.query.all()
-  return '%r' % result
-
 @app.route('/atminasspele')
 def spele():
   return render_template('atminasspele.html')
