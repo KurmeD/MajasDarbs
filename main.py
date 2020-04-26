@@ -8,12 +8,12 @@ from flask_sqlalchemy import SQLALchemy #db
 
 app = Flask('app')
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']#db
-db = SQLALchemy(app)#db
+db = SQLAlchemy(app)#db
 
 class test(db.Model):
   col =db.Column(db.String(255), primary_key=True)
   col2 = db.Column(db.String(255), unique=True, nullable=False) 
-    def __repr__(self):
+    def _repr_ (self):
       return '%r' % self.col
 
 @app.route('/')
@@ -41,7 +41,7 @@ def results():
   return render_template('rezultati.html')
 
 @app.route('/postgreSQL')
-def postgresSQL():
+def postgreSQL():
   result=test.query.all()
   return '%r' % result
 
