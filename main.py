@@ -41,9 +41,9 @@ def veidotaji():
 def results():
   return render_template('rezultati.html')
 
-@app.route('/atminasspele')
-def spele_page():
-  return render_template('chats.html')
+#@app.route('/atminasspele')
+#def spele#_page():
+#  return render_template('chats.html')
 
 @app.route('/health')
 def health_check():
