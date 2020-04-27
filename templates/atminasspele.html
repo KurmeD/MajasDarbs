@@ -18,7 +18,7 @@
         }
     </script>
   </head>
-  <body>
+  <body onload = "lasiChatu();" class = "body">
     <div class="row no-gutters">
       <div class="col-md-6 no-gutters">
         <div class="leftside d-flex justify-content-center align-items-center">
@@ -29,7 +29,10 @@
       </div>
       <div class="col-md-6 no-gutters">
         <div class="rightside d-flex justify-content-center align-items-center">
-         laba
+          {% block content %}
+                    
+          {% endblock %}
+          <script src="{{ url_for('static', filename='js/chats.js') }}" type="text/javascript"></script>
         </div>
       </div>
     </div>
