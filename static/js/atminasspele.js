@@ -18,7 +18,7 @@ class AtminasSpele {
         selectDifficulty.options[0].selected=true;
         selectDifficulty.onchange = () => this.limenaNomaina();
         selectDifficulty.setAttribute("id","limenis");
-        this.divPogas.appendChild(selectDifficulty);
+        selectDifficulty.setAttribute("class","poga");
         
 
         let btnJaunaSpele = document.createElement("button");
@@ -26,7 +26,7 @@ class AtminasSpele {
         btnJaunaSpele.onclick = () => this.jaunaSpele();
         btnJaunaSpele.setAttribute("class", "poga");
         this.divPogas.appendChild(btnJaunaSpele);
-
+        this.divPogas.appendChild(selectDifficulty);
         this.boxRekords=document.createElement("span");
         this.boxRekords.setAttribute("id","rekords");
         this.boxRekords.innerHTML="Vēl nav spēlēts.";
