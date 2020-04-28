@@ -129,10 +129,12 @@ ul.chat {
 
 .chat li .chat-body p {
   margin: 0;
+  color:#040404;
 }
 
 .chat li.left .chat-body:before {
   position: relative;
+  color:#040404;
   top: 10px;
   left: auto;
   display: inline-block;
