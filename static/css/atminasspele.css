@@ -86,7 +86,7 @@
  
  
  .bg-white {
-   background-color: #1b1b1b;
+   background-color: #fff;
  }
  
  .chat-message {
@@ -142,7 +142,7 @@
    top: 10px;
    left: auto;
    display: inline-block;
-   background: #fff;
+   background: #1b1b1b;
    width: 16px;
    height: 16px;
    border-top: 1px solid #f1f5fc;
