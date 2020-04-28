@@ -20,7 +20,7 @@ class AtminasSpele {
 
         this.divRezultats=document.createElement("div");
         this.divRezultats.innerHTML="Labākais rezultāts:";
-        this.divRezultats.setAttribute("class","teksts");
+        this.divRezultats.setAttribute("class","teksts1");
         this.divRezultats.appendChild(this.boxRekords);
         this.divPogas.appendChild(this.divRezultats);
 
@@ -30,7 +30,7 @@ class AtminasSpele {
 
         this.divGajieni=document.createElement("div");
         this.divGajieni.innerHTML="Gājienu skaits:";
-        this.divGajieni.setAttribute("class","teksts");
+        this.divGajieni.setAttribute("class","teksts1");
         this.divGajieni.appendChild(this.boxGajieni);
         this.divPogas.appendChild(this.divGajieni);
 
