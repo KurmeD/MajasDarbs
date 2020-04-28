@@ -1,7 +1,7 @@
 .stage{
     height: 300px;
-    width: 260px;
-    margin-left: 10px;
+    width: 240px;
+    margin-left: 5px;
     margin-top: 20px;
     margin-right: auto;
     position: absolute;
@@ -27,7 +27,7 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
-    width: 280px;
+    width: 240px;
     height: 50px;
     margin-top: 4%;
     background: #1b1b1b;
@@ -59,7 +59,7 @@
   
   .middle {
       width: 100%;
-      padding: 0 0 200px;
+      padding: 0 0 150px;
       position: absolute;
   }
   .middle:after {
