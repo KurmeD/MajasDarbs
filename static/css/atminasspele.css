@@ -173,7 +173,7 @@
    -ms-transition: all .5s ease;
    -o-transition: all .5s ease;
  }
- input[type=text] {
+ input[type=textc] {
   border: 2px solid #183059 !important;
   border-radius: 4px;
   color: #183059;
