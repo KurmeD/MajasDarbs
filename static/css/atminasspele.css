@@ -86,7 +86,7 @@
  
  
  .bg-white {
-   background-color: #fff;
+   background-color: #1b1b1b;
  }
  
  .chat-message {
@@ -115,7 +115,7 @@
  }
  
  .chat li.left .chat-body {
-   background-color: #fff;
+   background-color: #1b1b1b;
  }
  
  .chat li .chat-body {
