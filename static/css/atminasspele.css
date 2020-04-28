@@ -171,7 +171,8 @@ top:initial;
 input[type=text] {
   border: 2px solid #183059 !important;
   border-radius: 4px;
-  color: #183059;
+  color: #040404;
+}
   /*.btn-success {
   background-color: #276FBF;
 }
