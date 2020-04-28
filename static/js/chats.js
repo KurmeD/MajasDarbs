@@ -25,6 +25,7 @@ function  raadiChatuVienkarsi(dati){
 async function suutiZinju(){
     let zinjasElements = document.getElementById('zinja');
     let zinja = zinjasElements.value;
+    let autors = document.getElementById('autors').value;
 
     zinjasElements.value = "";
 
@@ -33,7 +34,7 @@ async function suutiZinju(){
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({"chats": zinja})
+        body: JSON.stringify({"chats": zinja, "autors":autors})
     });
     
     const datuObjekts = await atbilde.json();

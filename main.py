@@ -63,7 +63,7 @@ def suuti_zinju():
   dati = request.json
 
   with open("chats.txt", "a", newline="", encoding="UTF-8") as f:
-    f.write(dati["chats"] + "\n")
+    f.write(dati["autors"]+": "+dati["chats"] + "\n")
 
   return ielasit_chatu()
 
