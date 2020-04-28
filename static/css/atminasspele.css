@@ -19,6 +19,7 @@
  .laukums {
    max-width: 800px;
    display: grid;
+   margin-left: auto;
    margin-right: 5px;
    grid-template-columns: auto auto auto auto;
    float: left;
