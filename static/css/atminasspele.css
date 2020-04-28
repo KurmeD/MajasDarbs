@@ -110,7 +110,7 @@ ul.chat {
 }
 
 .chat li .chat-body {
-  position: relative;
+  position: fixed;
   font-size: 14px;
   padding: 10px;
   border: 1px solid #f1f5fc;
@@ -129,7 +129,7 @@ ul.chat {
 }
 
 .chat li.left .chat-body:before {
-  position: absolute;
+  position: fixed;
   top: 10px;
   left: -8px;
   display: inline-block;
@@ -179,7 +179,7 @@ input[type=text] {
   color: #183059;
 }
 
-a:hover, a:active, a:focus {
+/*a:hover, a:active, a:focus {
   text-decoration: none;
   outline: 0;
-}
+}*/
