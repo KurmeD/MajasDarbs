@@ -17,12 +17,12 @@
  }
  
  .laukums {
-   max-width: 250px;
+   max-width: 300px;
    display: grid;
    padding-left:0px;
    margin-left: 1px;
    grid-template-columns: auto auto auto auto;
-   padding-left:5px;
+   padding-left:1px;
    
  }
  span{
