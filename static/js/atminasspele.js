@@ -62,6 +62,7 @@ class AtminasSpele {
     limenaNomaina(){
         this.ParuSkaits=6-document.getElementById("limenis").selectedIndex;
         this.jaunaSpele();
+        this.Rekords="";
     }
 
     set GajienuSkaits(skaitlis){
