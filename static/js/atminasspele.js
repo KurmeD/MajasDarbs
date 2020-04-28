@@ -216,7 +216,7 @@ class AtminasSpele {
 }
 
 async function suutiJaunuZinju(limenis, gajieni){
-    let autors = "System message";
+    let autors = "System";
     let zinja = document.getElementById('autors').value + " "+ limenis + " pārus atrada "+gajieni +" gājienos.";
 
     const atbilde = await fetch('/chats/suuti', {
