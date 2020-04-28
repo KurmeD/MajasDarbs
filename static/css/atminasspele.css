@@ -10,7 +10,7 @@
   }
 }
 .rightside{
-  background:blue;
+ background-color:#424242;
 
 }.laukums {
   max-width: 50%;
@@ -24,6 +24,7 @@ span{
   padding: 5px;
 }
 .teksts{
+color:#ffffff;
   padding: 5px 10px;
 	margin: 5px;
   background:#1b1b1b;
@@ -82,14 +83,15 @@ font-family: sans-serif;;
 }
 
 .chat-message {
-  position:fixed;
-  top: 70px; 
-  left: 0;
+  position:relative;
+  top: 1px;
+  left: auto;
   right: 0;
   bottom:70px;
   padding: 15px;
   overflow-y:scroll; 
   float: none; 
+  height:40vh;
 }
 
 .chat {
@@ -110,7 +112,7 @@ ul.chat {
 }
 
 .chat li .chat-body {
-  position: fixed;
+  position: relative;
   font-size: 14px;
   padding: 10px;
   border: 1px solid #f1f5fc;
@@ -129,9 +131,9 @@ ul.chat {
 }
 
 .chat li.left .chat-body:before {
-  position: fixed;
+  position: relative;
   top: 10px;
-  left: -8px;
+  left: auto;
   display: inline-block;
   background: #fff;
   width: 16px;
@@ -151,10 +153,10 @@ ul.chat {
 }
 
 .chat-box {
-  position:fixed; 
-  bottom: 0; 
+  position:initial;
+top:initial;
+  bottom: 10px; 
   /* height:15px; */
-  left: 20px;
   right: 20px;
   padding: 15px;
   border-top: 1px solid #eee;
@@ -165,7 +167,7 @@ ul.chat {
   -o-transition: all .5s ease;
 }
 
-.btn-success {
+/*.btn-success {
   background-color: #276FBF;
 }
 
@@ -179,7 +181,8 @@ input[type=text] {
   color: #183059;
 }
 
-/*a:hover, a:active, a:focus {
+.chat a:hover, a:active, a:focus {
   text-decoration: none;
   outline: 0;
+  color:none;
 }*/
