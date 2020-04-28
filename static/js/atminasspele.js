@@ -26,7 +26,10 @@ class AtminasSpele {
         btnJaunaSpele.onclick = () => this.jaunaSpele();
         btnJaunaSpele.setAttribute("class", "poga");
         this.divPogas.appendChild(btnJaunaSpele);
-        this.divPogas.appendChild(selectDifficulty);
+        this.divDiv=document.createElement("div");
+        this.divDiv.appendChild(selectDifficulty);
+        this.divPogas.appendChild(this.divDiv);
+
         this.boxRekords=document.createElement("span");
         this.boxRekords.setAttribute("id","rekords");
         this.boxRekords.innerHTML="Vēl nav spēlēts.";
