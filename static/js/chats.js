@@ -67,7 +67,11 @@ function raadiChataRindas(dati) {
     chatScrollBox.scrollTop = chatScrollBox.scrollHeight;
   }
   
-  
+  function skatitRezultatus(){
+      
+  }
+
+
   function izveidoJaunuRindu(zinja) { 
     let newLI = document.createElement("li");
     newLI.className = "left clearfix"
