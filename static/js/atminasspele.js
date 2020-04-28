@@ -8,6 +8,19 @@ class AtminasSpele {
         this.konteiners.appendChild(this.divPogas);
         this.konteiners.appendChild(this.divLaukums);   //Izveidoti ekrānā divi laukumi - vienā būs pogas un statiskā informācija - otrā spēles kārtis
 
+        let selectDifficulty = document.createElement("select");
+        selectDifficulty.appendChild(document.createElement("option"));
+        selectDifficulty.appendChild(document.createElement("option"));
+        selectDifficulty.appendChild(document.createElement("option"));
+        selectDifficulty.options[0].text="6 pāri";
+        selectDifficulty.options[1].text="5 pāri";
+        selectDifficulty.options[2].text="4 pāri";
+        selectDifficulty.options[0].selected=true;
+        selectDifficulty.onchange = () => this.limenaNomaina();
+        selectDifficulty.setAttribute("id","limenis");
+        this.divPogas.appendChild(selectDifficulty);
+        
+
         let btnJaunaSpele = document.createElement("button");
         btnJaunaSpele.innerHTML="Jauna spēle";
         btnJaunaSpele.onclick = () => this.jaunaSpele();
@@ -44,6 +57,11 @@ class AtminasSpele {
         this.kartinuMasivs=[]; //Šeit glabāsies konkrētās spēles masīvs.
         this.PirmaKarts=0;
 
+    }
+
+    limenaNomaina(){
+        this.ParuSkaits=6-document.getElementById("limenis").selectedIndex;
+        this.jaunaSpele();
     }
 
     set GajienuSkaits(skaitlis){
