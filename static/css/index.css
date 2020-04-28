@@ -23,6 +23,22 @@
     position: absolute;
     
   }
+  .bbb{
+    text-decoration: none;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 0;
+    cursor: pointer;
+    width: 100%;
+    background:#1b1b1b;
+    border-radius: 10px;
+    font-family: Century Gothic;
+    letter-spacing: 5px;
+    color: #ffffff;
+    font-weight: bold; 
+    position: absolute;
+    
+  }
   .divaaa{
     margin-left: auto;
     margin-right: auto;
@@ -47,6 +63,10 @@
   }
   .divaaa:nth-child(even){
     transform: perspective(300px) rotateY(-45deg);
+      box-shadow: 2px 2px 7px #1b1b1b;
+  }
+  .divaaa:last-child{
+    transform: rotateY(0);
       box-shadow: 2px 2px 7px #1b1b1b;
   }
   .divaaa:hover{

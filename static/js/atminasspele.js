@@ -8,11 +8,27 @@ class AtminasSpele {
         this.konteiners.appendChild(this.divPogas);
         this.konteiners.appendChild(this.divLaukums);   //Izveidoti ekrānā divi laukumi - vienā būs pogas un statiskā informācija - otrā spēles kārtis
 
+        let selectDifficulty = document.createElement("select");
+        selectDifficulty.appendChild(document.createElement("option"));
+        selectDifficulty.appendChild(document.createElement("option"));
+        selectDifficulty.appendChild(document.createElement("option"));
+        selectDifficulty.options[0].text="6 pāri";
+        selectDifficulty.options[1].text="5 pāri";
+        selectDifficulty.options[2].text="4 pāri";
+        selectDifficulty.options[0].selected=true;
+        selectDifficulty.onchange = () => this.limenaNomaina();
+        selectDifficulty.setAttribute("id","limenis");
+        selectDifficulty.setAttribute("class","poga");
+        
+
         let btnJaunaSpele = document.createElement("button");
         btnJaunaSpele.innerHTML="Jauna spēle";
         btnJaunaSpele.onclick = () => this.jaunaSpele();
         btnJaunaSpele.setAttribute("class", "poga");
         this.divPogas.appendChild(btnJaunaSpele);
+        this.divDiv=document.createElement("div");
+        this.divDiv.appendChild(selectDifficulty);
+        this.divPogas.appendChild(this.divDiv);
 
         this.boxRekords=document.createElement("span");
         this.boxRekords.setAttribute("id","rekords");
@@ -44,6 +60,12 @@ class AtminasSpele {
         this.kartinuMasivs=[]; //Šeit glabāsies konkrētās spēles masīvs.
         this.PirmaKarts=0;
 
+    }
+
+    limenaNomaina(){
+        this.ParuSkaits=6-document.getElementById("limenis").selectedIndex;
+        this.jaunaSpele();
+        this.Rekords="";
     }
 
     set GajienuSkaits(skaitlis){
@@ -180,6 +202,7 @@ class AtminasSpele {
     uzvara(){
         if (this.statuss===AtminasSpele.STATUSS_UZVARA){
             this.divLaukums.innerHTML+="<h1>Uzvara!!!!</h1>"
+            suutiJaunuZinju(this.ParuSkaits, this.GajienuSkaits)
             if(this.Rekords){
                 if(this.Rekords>this.GajienuSkaits){
                     this.Rekords=this.GajienuSkaits;
@@ -191,6 +214,26 @@ class AtminasSpele {
     };
 
 }
+
+async function suutiJaunuZinju(limenis, gajieni){
+    let autors = "System";
+    let zinja = document.getElementById('autors').value + " "+ limenis + " pārus atrada "+gajieni +" gājienos.";
+
+    const atbilde = await fetch('/chats/suuti', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({"chats": zinja, "autors":autors})
+    });
+
+    const datuObjekts = await atbilde.json();
+
+    //raadiChatuVienkarsi(datuObjekts);
+    raadiChataRindas(datuObjekts);
+
+}
+
 
 AtminasSpele.STATUSS_SPELE=1;
 AtminasSpele.STATUSS_UZVARA=2;
