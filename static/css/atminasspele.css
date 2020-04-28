@@ -103,10 +103,12 @@ font-family: sans-serif;;
 
 .chat-body {
   padding-bottom: 20px;
+  color:#040404;
 }
 
 ul.chat {
   padding-inline-start: 5px;
+  color:#040404;
 }
 
 .chat li.left .chat-body {
@@ -128,6 +130,7 @@ ul.chat {
 .chat li .chat-body .header {
   padding-bottom: 5px;
   border-bottom: 1px solid #f1f5fc;
+  color:#040404;
 }
 
 .chat li .chat-body p {
@@ -156,6 +159,7 @@ ul.chat {
 
 .chat li {
   margin: 15px 0;
+  color:#040404;
 }
 
 .chat-box {
