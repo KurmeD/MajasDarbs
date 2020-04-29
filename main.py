@@ -25,6 +25,10 @@ def root():
 def spele():
  return render_template('atminasspele.html')
 
+@app.route('/rezultati')
+def rezultati():
+ return render_template('rezultati.html')
+
 @app.route('/kalkulators')
 def kalkulators():
   return render_template('kalkulators.html')
