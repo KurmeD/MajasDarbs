@@ -23,6 +23,22 @@
     position: absolute;
     
   }
+  .aa1{
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0;
+    cursor: pointer;
+    width: 100%;
+    background:#1b1b1b;
+    border-radius: 10px;
+    font-family: Century Gothic;
+    letter-spacing: 5px;
+    color: #ffffff;
+    font-weight: bold; 
+    position: absolute;
+    
+  }
   .bbb{
     text-decoration: none;
     font-size: 35px;
