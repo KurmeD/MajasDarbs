@@ -68,7 +68,7 @@ function raadiChataRindas(dati) {
   }
   
   function skatitRezultatus(){
-      
+      console.log("ir?")
   }
 
 
