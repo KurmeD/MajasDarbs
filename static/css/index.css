@@ -23,6 +23,22 @@
     position: absolute;
     
   }
+  .aaa1{
+    text-decoration: none;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0;
+    cursor: pointer;
+    width: 100%;
+    background:#1b1b1b;
+    border-radius: 10px;
+    font-family: Century Gothic;
+    letter-spacing: 5px;
+    color: #ffffff;
+    font-weight: bold; 
+    position: absolute;
+    
+  }
   .bbb{
     text-decoration: none;
     font-size: 35px;
@@ -93,7 +109,7 @@
       overflow: hidden;
   }
   .content {
-      padding: 0 0 0 370px;
+      padding: 0 0 0 250px;
   }
   html, body, h3{
     background-color:#424242;
