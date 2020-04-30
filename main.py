@@ -105,7 +105,8 @@ def suuti_rezultatu():
       rezultatu_rindas.insert(rezultatu_rindas.index(rinda),jauna_rinda)
 
   with open("pari"+str(dati["limenis"])+".txt", "w", newline="", encoding="UTF-8") as f:
-    f.write(rezultatu_rindas)
+    for rinda in rezultatu_rindas:
+      f.write(rinda+"\n")
 
   return ielasit_rezultatus()
 
