@@ -53,6 +53,7 @@ ievadesLauks.addEventListener("keyup", function(event){
 
 
 function raadiChataRindas(dati) {
+    
     const chatUL = document.getElementById("chats");
     // novaacam ieprieksheejo saturu
     while (chatUL.firstChild) {
@@ -65,10 +66,31 @@ function raadiChataRindas(dati) {
     // noskrolleejam uz leju pie peedeejaa chata texta
     var chatScrollBox = chatUL.parentNode;
     chatScrollBox.scrollTop = chatScrollBox.scrollHeight;
-  }
+}
   
-  
-  function izveidoJaunuRindu(zinja) { 
+async function skatitRezultatus(){
+    const atbilde = await fetch('/chats/lasi');
+    const datuObjekts = await atbilde.json();
+
+    const chatUL = document.getElementById("chats");
+    // novaacam ieprieksheejo saturu
+    while (chatUL.firstChild) {
+        chatUL.firstChild.remove();
+    }
+    for (let rinda of datuObjekts["chats"]) {
+        if (rinda.startsWith("System")){
+            console.log("jee");
+            chatLI = izveidoJaunuRindu(rinda);
+            chatUL.appendChild(chatLI);      
+        } else {console.log("noooo")}
+    }
+    // noskrolleejam uz leju pie peedeejaa chata texta
+    var chatScrollBox = chatUL.parentNode;
+    chatScrollBox.scrollTop = chatScrollBox.scrollHeight;
+}
+
+
+function izveidoJaunuRindu(zinja) { 
     let newLI = document.createElement("li");
     newLI.className = "left clearfix"
     let newDiv = document.createElement("div"); 
@@ -77,4 +99,4 @@ function raadiChataRindas(dati) {
     newLI.appendChild(newDiv); 
     newDiv.appendChild(newContent); 
     return newLI;
-  }
+}
