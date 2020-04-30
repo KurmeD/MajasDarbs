@@ -120,7 +120,7 @@ def suuti_rezultatu():
     else:
       rezultatu_rindas.append(jauna_rinda)
 
-  with open(fails, "w", newline="", encoding="UTF-8") as f:
+  with open(fails, "w", encoding="UTF-8") as f:
     for rinda in rezultatu_rindas:
       f.write(rinda+"\n")
       f.write("sakums \n")
