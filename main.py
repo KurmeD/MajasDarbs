@@ -119,6 +119,8 @@ def suuti_rezultatu():
       rezultatu_rindas.insert(rezultatu_rindas.index(rinda),jauna_rinda)
     else:
       rezultatu_rindas.append(jauna_rinda)
+  
+  print(rezultatu_rindas)
 
   with open(fails, "w", encoding="UTF-8") as f:
     for rinda in rezultatu_rindas:
