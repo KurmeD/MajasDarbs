@@ -35,7 +35,7 @@ async function suutiRezultatu(rezultats, limenis){
     const datuObjekts = await atbilde.json();
 
     //raadiChatuVienkarsi(datuObjekts);
-    raadiRezultataRindas(datuObjekts);
+    //raadiRezultataRindas(datuObjekts);
 }
 
 // let ievadesLauks = document.getElementById("zinja");
