@@ -95,7 +95,7 @@ def suuti_zinju():
 def suuti_rezultatu():
   dati = request.json
   ielikts=0
-  jauna_rinda=str(dati["rezultats"])+" "+dati["autors"]
+  jauna_rinda=str(dati["rezultats"])+" gajienos "+dati["autors"]+" izpildija\n"
   rezultatu_rindas=[]
   print(jauna_rinda)
   fails=""
@@ -117,7 +117,6 @@ def suuti_rezultatu():
     print(int(rinda.split()[0]))
     if dati["rezultats"] < int(rinda.split()[0]):
       rezultatu_rindas.insert(rezultatu_rindas.index(rinda),jauna_rinda)
-      print("jaliek")
       ielikts=1
       break
 
@@ -129,7 +128,7 @@ def suuti_rezultatu():
   with open(fails, "w", encoding="UTF-8") as f:
     for rinda in rezultatu_rindas:
       print(rinda)
-      f.write(rinda+"\n")
+      f.write(rinda)
 
   return ielasit_rezultatus()
 
