@@ -96,6 +96,7 @@ def suuti_zinju():
 @app.route('/rezultati/suuti', methods= ['POST'])
 def suuti_rezultatu():
   dati = request.json
+  ielikts=0
   jauna_rinda=str(dati["rezultats"])+" "+dati["autors"]
   rezultatu_rindas=[]
   print(jauna_rinda)
@@ -119,11 +120,10 @@ def suuti_rezultatu():
     if dati["rezultats"] < int(rinda.split()[0]):
       rezultatu_rindas.insert(rezultatu_rindas.index(rinda),jauna_rinda)
       print("jaliek")
-    else:
-      print("nav")
-      rezultatu_rindas.append(jauna_rinda)
-  
-  if len(rezultatu_rindas)==0:
+      ielikts=1
+      break
+
+  if len(rezultatu_rindas)==0 or ielikts==0:
     rezultatu_rindas.append(jauna_rinda)
 
   print(rezultatu_rindas)
@@ -132,7 +132,6 @@ def suuti_rezultatu():
     for rinda in rezultatu_rindas:
       print(rinda)
       f.write(rinda+"\n")
-      f.write("sakums \n")
 
   return ielasit_rezultatus()
 
