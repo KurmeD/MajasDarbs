@@ -115,15 +115,19 @@ def suuti_rezultatu():
 
   f.close()
   for rinda in rezultatu_rindas:
+    print(int(rinda.split()[0]))
     if dati["rezultats"] < int(rinda.split()[0]):
       rezultatu_rindas.insert(rezultatu_rindas.index(rinda),jauna_rinda)
+      print("jaliek")
     else:
+      print("nav")
       rezultatu_rindas.append(jauna_rinda)
   
   print(rezultatu_rindas)
 
   with open(fails, "w", encoding="UTF-8") as f:
     for rinda in rezultatu_rindas:
+      print(rinda)
       f.write(rinda+"\n")
       f.write("sakums \n")
 
