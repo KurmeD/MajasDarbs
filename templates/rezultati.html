@@ -3,6 +3,7 @@
 {% block content %}
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="{{ url_for('static', filename='js/rezultati.js') }}"></script>
     <style>
     * {
       box-sizing: border-box;
@@ -30,24 +31,36 @@
       }
     }
     </style>
+        <!-- <script src="{{ url_for('static', filename='js/chats.js') }}"></script> -->
+        <script type="text/javascript" charset="UTF-8">
+          window.onload = () => lasiRezultatu();
+      </script>  
+    
     </head>
     <body>
     <h2>Spēles rezultāti</h2>
     
     <div class="row">
       <div class="column" style="background-color:#aaa;">
-        <h2>1</h2>
-    
+        <h2>6 pāri</h2>
+        <div id="pari6rezult">
+        
+        </div>
       </div>
       <div class="column" style="background-color:#bbb;">
-        <h2>2</h2>
-     
+        <h2>5 pāri</h2>
+        <div id="pari5rezult">
+        
+        </div>
       </div>
       <div class="column" style="background-color:#ccc;">
-        <h2>3</h2>
-      
+        <h2>4 pāri</h2>
+        <div id="pari4rezult">
+        
+        </div>
       </div>
     </div>
+
     
     </body>
 
