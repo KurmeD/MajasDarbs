@@ -95,7 +95,15 @@ def suuti_rezultatu():
   dati = request.json
   jauna_rinda=str(dati["rezultats"])+" "+dati["autors"]
   rezultatu_rindas=[]
-  with open("pari"+str(dati["limenis"])+".txt", "r", encoding="UTF-8") as f:
+  fails=""
+  if dati["limenis"]==6:
+    fails="pari6.txt"
+  elif dati["limenis"]==5:
+    fails="pari5.txt"
+  else:
+    fails="pari4.txt"
+
+  with open(fails, "r", encoding="UTF-8") as f:
     for rinda in f:
       rezultatu_rindas.append(rinda)
 
@@ -106,7 +114,7 @@ def suuti_rezultatu():
     else:
       rezultatu_rindas.append(jauna_rinda)
 
-  with open("pari"+str(dati["limenis"])+".txt", "w", newline="", encoding="UTF-8") as f:
+  with open(fails, "w", newline="", encoding="UTF-8") as f:
     for rinda in rezultatu_rindas:
       f.write(rinda+"\n")
 
