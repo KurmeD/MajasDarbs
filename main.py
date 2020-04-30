@@ -63,6 +63,7 @@ def ielasit_chatu():
 
 @app.route('/rezultati/lasi')
 def ielasit_rezultatus():
+  print("lasa")
   rezultatu6_rindas=[]
   rezultatu5_rindas=[]
   rezultatu4_rindas=[]
@@ -96,6 +97,7 @@ def suuti_rezultatu():
   dati = request.json
   jauna_rinda=str(dati["rezultats"])+" "+dati["autors"]
   rezultatu_rindas=[]
+  print(jauna_rinda)
   fails=""
   if dati["limenis"]==6:
     fails="pari6.txt"
@@ -103,6 +105,8 @@ def suuti_rezultatu():
     fails="pari5.txt"
   else:
     fails="pari4.txt"
+  
+  print(fails)
 
   with open(fails, "r", encoding="UTF-8") as f:
     for rinda in f:
