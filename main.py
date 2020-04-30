@@ -61,6 +61,25 @@ def ielasit_chatu():
       
   return jsonify({"chats": chata_rindas})
 
+@app.route('/rezultati/lasi')
+def ielasit_rezultatus():
+  rezultatu6_rindas=[]
+  rezultatu5_rindas=[]
+  rezultatu4_rindas=[]
+  with open("pari6.txt", "r", encoding="UTF-8") as f1:
+    for rinda in f1:
+      rezultatu6_rindas.append(rinda)
+
+  with open("pari5.txt", "r", encoding="UTF-8") as f2:
+    for rinda in f2:
+      rezultatu5_rindas.append(rinda)
+
+  with open("pari4.txt", "r", encoding="UTF-8") as f3:
+    for rinda in f3:
+      rezultatu4_rindas.append(rinda)
+
+  return jsonify({"rezultati6": rezultatu6_rindas, "rezultati5": rezultatu5_rindas, "rezultati4": rezultatu4_rindas})
+
 
 @app.route('/chats/suuti', methods= ['POST'])
 def suuti_zinju():
@@ -70,6 +89,26 @@ def suuti_zinju():
     f.write(dati["autors"]+": "+dati["chats"] + "\n")
 
   return ielasit_chatu()
+
+@app.route('/rezultati/suuti/<limenis>', methods= ['POST'])
+def suuti_rezultatu(limenis):
+  dati = request.json
+  jauna_rinda=dati["rezultats"]+" "+dati["autors"]
+  rezultatu_rindas=[]
+  with open(limenis, "r", encoding="UTF-8") as f:
+    for rinda in f:
+      rezultatu_rindas.append(rinda)
+
+  f.close()
+
+  for rinda in rezultatu_rindas:
+    if dati["rezultats"] < int(rinda.split()[0]):
+      rezultatu_rindas.insert(rezultatu_rindas.index(rinda),jauna_rinda)
+
+  with open(limenis, "w", newline="", encoding="UTF-8") as f:
+    f.write(rezultatu_rindas)
+
+  return ielasit_rezultatus()
 
 
 

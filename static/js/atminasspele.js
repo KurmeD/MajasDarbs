@@ -202,7 +202,8 @@ class AtminasSpele {
     uzvara(){
         if (this.statuss===AtminasSpele.STATUSS_UZVARA){
             this.divLaukums.innerHTML+="<h1>Uzvara!!!!</h1>"
-            suutiJaunuZinju(this.ParuSkaits, this.GajienuSkaits)
+            suutiJaunuZinju(this.ParuSkaits, this.GajienuSkaits);
+            suutiRezultatu(this.GajienuSkaits, this.ParuSkaits);
             if(this.Rekords){
                 if(this.Rekords>this.GajienuSkaits){
                     this.Rekords=this.GajienuSkaits;
