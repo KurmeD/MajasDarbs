@@ -3,6 +3,7 @@
 {% block content %}
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="{{ url_for('static', filename='js/rezultati.js') }}"></script>
     <style>
     * {
       box-sizing: border-box;
@@ -34,6 +35,7 @@
         <script type="text/javascript" charset="UTF-8">
           window.onload = () => ielasitRezultatus();
       </script>  
+    
     </head>
     <body>
     <h2>Spēles rezultāti</h2>
@@ -58,6 +60,7 @@
         </div>
       </div>
     </div>
+
     
     </body>
 
