@@ -103,6 +103,8 @@ def suuti_rezultatu():
   for rinda in rezultatu_rindas:
     if dati["rezultats"] < int(rinda.split()[0]):
       rezultatu_rindas.insert(rezultatu_rindas.index(rinda),jauna_rinda)
+    else:
+      rezultatu_rindas.append(jauna_rinda)
 
   with open("pari"+str(dati["limenis"])+".txt", "w", newline="", encoding="UTF-8") as f:
     for rinda in rezultatu_rindas:
