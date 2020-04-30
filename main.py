@@ -123,6 +123,9 @@ def suuti_rezultatu():
       print("nav")
       rezultatu_rindas.append(jauna_rinda)
   
+  if len(rezultatu_rindas)==0:
+    rezultatu_rindas.append(jauna_rinda)
+
   print(rezultatu_rindas)
 
   with open(fails, "w", encoding="UTF-8") as f:
