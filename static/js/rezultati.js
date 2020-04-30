@@ -5,8 +5,8 @@ async function lasiRezultatu(){
     const datuObjekts = await atbilde.json();
     //raadiChatuVienkarsi(datuObjekts);
     raadiRezultataRindas(datuObjekts);
-    // await new Promise(resolve=> setTimeout(resolve, ATJAUNOT));
-    // await lasiRezultatu();
+    await new Promise(resolve=> setTimeout(resolve, ATJAUNOT));
+    await lasiRezultatu();
 
 }
 
