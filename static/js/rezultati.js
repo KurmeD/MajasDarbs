@@ -24,12 +24,12 @@ async function lasiRezultatu(){
 // }
 async function suutiRezultatu(rezultats, limenis){
     let autors = document.getElementById('autors').value;
-    const atbilde = await fetch('/rezultati/suuti/pari'+limenis+'.txt', {
+    const atbilde = await fetch('/rezultati/suuti', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
         },
-        body: JSON.stringify({"rezultats": rezultats, "autors":autors})
+        body: JSON.stringify({"rezultats": rezultats, "autors":autors, "limenis":limenis})
     });
     
     const datuObjekts = await atbilde.json();
