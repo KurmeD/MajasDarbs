@@ -100,7 +100,6 @@ def suuti_rezultatu():
       rezultatu_rindas.append(rinda)
 
   f.close()
-
   for rinda in rezultatu_rindas:
     if dati["rezultats"] < int(rinda.split()[0]):
       rezultatu_rindas.insert(rezultatu_rindas.index(rinda),jauna_rinda)
