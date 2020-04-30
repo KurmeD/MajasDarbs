@@ -77,9 +77,7 @@ def ielasit_rezultatus():
 
   with open("pari4.txt", "r", encoding="UTF-8") as f3:
     for rinda in f3:
-      rezultatu4_rindas.append("pedejais4")
       rezultatu4_rindas.append(rinda)
-      print(rinda)
 
   return jsonify({"rezultati6": rezultatu6_rindas, "rezultati5": rezultatu5_rindas, "rezultati4": rezultatu4_rindas})
 
